@@ -1,9 +1,19 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation, useParams } from 'react-router-dom';
 import { HomeLayout } from '../Components';
 import { About, Blog, Home } from './pages';
 
 const RootRouter = () => {
+  /* Router */
+  const location = useLocation();
+  const params = useParams();
+
+  console.log(location);
+  console.log(params);
+  /* State */
+  /* Functions */
+  /* Hooks */
+  /* Render */
   return (
     <Routes>
       <Route path="/" element={<HomeLayout />}>
