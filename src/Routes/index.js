@@ -15,7 +15,7 @@ const RootRouter = () => {
     <Routes>
       <Route path={url_path} element={<HomeLayout />}>
         <Route index element={<Home />} />
-        <Route path={`${url_path}`} element={<About />} />
+        <Route path={`${url_path}about`} element={<About />} />
         <Route path={`${url_path}blog`} element={<Blog />} />
         <Route path={`${url_path}blog/:blogId`} element={<Blog />} />
       </Route>

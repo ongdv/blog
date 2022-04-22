@@ -2,10 +2,12 @@ import React from 'react';
 import './home-layout.css';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import PROFILE from 'Assets/img/profile.jpg';
+import { URL_PATH } from 'Utils';
 
 const HomeLayout = () => {
   /* Router */
   const { pathname } = useLocation();
+  const url_path = URL_PATH === '' ? '/' : URL_PATH;
   /* State */
   /* Functions */
   /* Hooks */
@@ -21,24 +23,27 @@ const HomeLayout = () => {
           <div className="profile-desc">Development / Photo / Cook</div>
         </div>
         <div className="menu-container">
-          <Link to="/" className={`menu-item ${pathname === '/' && 'active'}`}>
+          <Link
+            to={`${url_path}`}
+            className={`menu-item ${pathname === '/' && 'active'}`}
+          >
             Home
           </Link>
           <Link
-            to="/about"
+            to={`${url_path}about`}
             className={`menu-item ${pathname === '/about' && 'active'}`}
           >
             About
           </Link>
           <Link
-            to="/blog"
+            to={`${url_path}blog`}
             // className={`menu-item ${pathname.includes('/blog') && 'active'}`}
             className={`menu-item ${pathname === '/blog' && 'active'}`}
           >
             Blog
           </Link>
           <Link
-            to="/blog/123"
+            to={`${url_path}blog/123`}
             className={`menu-item ${pathname.includes('/blog/') && 'active'}`}
           >
             Blog 게시물 예제
