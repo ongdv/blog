@@ -25,26 +25,32 @@ const HomeLayout = () => {
         <div className="menu-container">
           <Link
             to={`${url_path}`}
-            className={`menu-item ${pathname === '/' && 'active'}`}
+            className={`menu-item ${pathname === url_path && 'active'}`}
           >
             Home
           </Link>
           <Link
             to={`${url_path}about`}
-            className={`menu-item ${pathname === '/about' && 'active'}`}
+            className={`menu-item ${
+              pathname === `${url_path}about` && 'active'
+            }`}
           >
             About
           </Link>
           <Link
             to={`${url_path}blog`}
             // className={`menu-item ${pathname.includes('/blog') && 'active'}`}
-            className={`menu-item ${pathname === '/blog' && 'active'}`}
+            className={`menu-item ${
+              pathname === `${url_path}blog` && 'active'
+            }`}
           >
             Blog
           </Link>
           <Link
             to={`${url_path}blog/123`}
-            className={`menu-item ${pathname.includes('/blog/') && 'active'}`}
+            className={`menu-item ${
+              pathname.includes(`${url_path}blog/`) && 'active'
+            }`}
           >
             Blog 게시물 예제
           </Link>
