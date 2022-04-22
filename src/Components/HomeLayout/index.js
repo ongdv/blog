@@ -6,7 +6,6 @@ import PROFILE from 'Assets/img/profile.jpg';
 const HomeLayout = () => {
   /* Router */
   const { pathname } = useLocation();
-  console.log(pathname);
   /* State */
   /* Functions */
   /* Hooks */
